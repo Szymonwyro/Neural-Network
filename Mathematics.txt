@@ -1,0 +1,46 @@
+28x28 pixel training images, 784 pixels with n images
+2 layers in the neural network
+layer 1 = 784 nodes for 784 pixels
+layer 2 = hidden layer
+layer 3 = output layer
+
+------forward propagation------
+A0 is the input matrix
+Z1 is the unactivated first layer
+    apply a weight and bias to A0, W1 and b1
+apply an activation function
+    ReLU(x)
+        where x -> x for x > 0
+        and x -> 0 if x <= 0
+A1 = ReLU(x)
+Z2 is the unactivated second layer
+    apply a weight and bias to A1, W2 and b2
+finally, apply softmax the output Z2
+    softmax(Z2)
+        exp(x[i])/sum(expx[j]) from j=1 -> K
+        this outputs values as proabbilities with sum 1
+A2 = softmax(Z2), this is the output prediciton
+
+------back propagation------
+dZ2 is the error of the second layer (10 x m)
+    dZ2 = A2 - Y, both of these are 10 x n matrices
+dW2 is the 10 x 10 matrix
+    d"2 = 1/m(dZ2)(A1.T)
+db2 is the average of the absolute error
+    db2 = 1/m(sum(dZ2))
+
+dZ1 is the error of the first layer (10 x m)
+    dZ2 = W2.T(dZ2) * g'(Z1)
+        g'() is the derivative of the activation function
+dW1 = 1/m(dZ1)(X.T)
+db1 = 1/m(sum(dZ1))
+
+------update params------
+W1 = W1 - alpha(dW1)
+b1 = b1 - aplha(db1)
+W2 = W2 = alpha(dW2)
+b2 = b2 - alpha(db2)
+
+where alpha is the learning rate, a hyper parameter
+
+and repeat
