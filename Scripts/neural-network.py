@@ -7,7 +7,7 @@ data = pd.read_csv(data_file)
 
 data = np.array(data)
 m, n = data.shape
-np.random.shuffle(data) # shuffle before splitting into dev and training sets
+np.random.shuffle(data)
 
 data_dev = data[0:1000].T
 Y_dev = data_dev[0]
