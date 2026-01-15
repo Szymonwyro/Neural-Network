@@ -24,18 +24,19 @@ This project implements a **fully connected neural network from scratch using Nu
 ```text
 Handwritten-Digit-NN/          
 ├── README.md                  
-├── train.py                    
+├── neural-network.py                    
 ├── model.py                    
 ├── main.py                     
 ├── data/                       
 │   └── train.csv
+│   └── test.csv
 ├── weights/                    
 │   ├── W1.npy
 │   ├── b1.npy
 │   ├── W2.npy
 │   └── b2.npy
-└── frontend/                   
-    └── ...
+└── mathematics/
+    └── Mathematics.txt (overview of mathematics involved)
 
 ```
 
