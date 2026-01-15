@@ -12,7 +12,7 @@ This project implements a **fully connected neural network from scratch using Nu
   - Output: 10 neurons, softmax  
 - **Training pipeline**:
   - Custom gradient descent
-  - One-hot encoding of labels)
+  - One-hot encoding of labels
 - **Model persistence**: Saves weights as `.npy` files for easy inference
 - **FastAPI backend**: Exposes a `/predict` endpoint
 - **Confidence output**: Returns the predicted digit and its probability
@@ -21,17 +21,23 @@ This project implements a **fully connected neural network from scratch using Nu
 
 ## Folder Structure
 
-Handwritten Digit NN/
-├── main.py # FastAPI backend
-├── model.py # Loads saved weights and runs inference
-├── W1.npy # Trained weight matrices
-├── b1.npy
-├── W2.npy
-├── b2.npy
-├── train.py # Training script (from neural-network.py)
-├── README.md
+```text
+Handwritten-Digit-NN/          
+├── README.md                  
+├── train.py                    
+├── model.py                    
+├── main.py                     
+├── data/                       
+│   └── train.csv
+├── weights/                    
+│   ├── W1.npy
+│   ├── b1.npy
+│   ├── W2.npy
+│   └── b2.npy
+└── frontend/                   
+    └── ...
 
----
+```
 
 ## Getting Started
 
