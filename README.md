@@ -62,4 +62,16 @@ python -m uvicorn main:app --reload
 python -m uvicorn main:app --reload
 ```
 
+## Future Enhancements
+
+### Display top-3 predictions
+### Live preview of downscaled 28x28 input for debugging
+### Convert to TensorFlow.js for client-side interface
+### Build React component with live drawing and prediction display
+
+## Author
+
+### Szymon Wyrozumski
+
+
 
