@@ -64,10 +64,10 @@ python -m uvicorn main:app --reload
 
 ## Future Enhancements
 
-### Display top-3 predictions
-### Live preview of downscaled 28x28 input for debugging
-### Convert to TensorFlow.js for client-side interface
-### Build React component with live drawing and prediction display
+### 1. Display top-3 predictions
+### 2. Live preview of downscaled 28x28 input for debugging
+### 3. Convert to TensorFlow.js for client-side interface
+### 4. Build React component with live drawing and prediction display
 
 ## Author
 
